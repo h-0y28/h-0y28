@@ -13,8 +13,8 @@ export const Title = styled.h1`
 
 export const CardContainer = styled.div`
   display: flex;
-  margin-left: 8rem;
-  margin-right: 8rem;
+  margin-left: 20%;
+  margin-right: 20%;
   flex-wrap: wrap;
   justify-content: space-around;
 `;
@@ -28,13 +28,12 @@ export const Card = styled.div`
   height: 6rem;
   margin: 16px 0;
 
-  /* 반응형 디자인 */
   @media (max-width: 1024px) {
-    width: calc(50% - 20px);
+    width: calc(50%);
   }
 
   @media (max-width: 768px) {
-    width: calc(100% - 20px);
+    width: calc(100%);
   }
 `;
 
