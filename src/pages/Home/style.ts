@@ -1,29 +1,14 @@
 import styled from "styled-components";
-import { theme } from "../../styles/theme";
+import theme from "../../styles/theme";
 
 export const HomeContainer = styled.div`
+  padding-top: 15rem;
+  padding-bottom: 8rem;
   position: relative;
-  width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-  }
-
-  > * {
-    position: relative;
-    z-index: 2;
-  }
 `;
 
 export const IntroduceContainer = styled.div`
@@ -31,16 +16,24 @@ export const IntroduceContainer = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 3rem;
+  font-size: 4rem;
   color: ${theme.colors.white};
   margin-bottom: 2rem;
+
+  @media (max-width: 1024px) {
+    font-size: 3rem;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
 `;
 
 export const Line = styled.hr`
   width: 4rem;
   margin: 0 auto;
   text-align: center;
-  background: ${theme.colors.secondary};
+  background: ${theme.colors.primary};
   height: 3px;
   border: none;
   border-radius: 20px;
@@ -48,5 +41,19 @@ export const Line = styled.hr`
 
 export const IntroduceText = styled.p`
   margin-top: 2rem;
-  color: ${theme.colors.white};
+  font-weight: 100;
+  color: ${theme.colors.background};
+  font-size: 23px;
+
+  span {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 19px;
+  }
+  @media (max-width: 768px) {
+    font-size: 15px;
+  }
 `;
