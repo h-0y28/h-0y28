@@ -4,7 +4,6 @@ import Home from "../pages/Home";
 import About from "../pages/About";
 import Skills from "../pages/Projects";
 import Projects from "../pages/Skills";
-import Contact from "../pages/Contact";
 import theme from "../styles/theme";
 import homeImg from "../assets/homeImg.jpg";
 
@@ -26,9 +25,6 @@ export const MainPage: React.FC = () => {
         </S.Section>
         <S.Section id="projects">
           <Projects />
-        </S.Section>
-        <S.Section id="contact" bgColor={theme.colors.secondary}>
-          <Contact />
         </S.Section>
       </main>
     </div>
