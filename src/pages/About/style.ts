@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import theme from "../../styles/theme";
 
-export const Container = styled.div``;
-
 export const Title = styled.h1`
   margin-top: 10rem;
   margin-bottom: 3rem;
@@ -13,8 +11,6 @@ export const Title = styled.h1`
 
 export const CardContainer = styled.div`
   display: flex;
-  margin-left: 20%;
-  margin-right: 20%;
   flex-wrap: wrap;
   justify-content: space-around;
 `;
