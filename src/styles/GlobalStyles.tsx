@@ -19,8 +19,6 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     font-family: 'Pretendard-Regular', sans-serif;
     background-color: ${theme.colors.background};
-
-    color: #333; 
   }
 `;
 
