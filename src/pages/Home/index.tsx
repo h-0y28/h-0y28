@@ -4,14 +4,12 @@ export default function Home() {
   return (
     <S.HomeContainer>
       <S.IntroduceContainer>
-        <S.Title>FE 개발자 정효주의 포트폴리오입니다.</S.Title>
+        <S.Title>프론트엔드 개발자 정효주</S.Title>
         <S.Line />
         <S.IntroduceText>
-          안녕하세요.
-          <br />
-          끊임없이 발전하는 프론트엔드 개발자
-          <br />
-          정효주입니다.
+          <span>안녕하세요?</span>
+          <span>끊임없이 발전하는 개발자</span>
+          <span>정효주입니다!</span>
         </S.IntroduceText>
       </S.IntroduceContainer>
     </S.HomeContainer>
