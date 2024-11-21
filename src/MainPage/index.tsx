@@ -18,13 +18,13 @@ export const MainPage: React.FC = () => {
         <S.Section id="home" bgImg={homeImg}>
           <Home />
         </S.Section>
-        <S.Section id="about" bgColor={theme.colors.background}>
+        <S.Section id="about">
           <About />
         </S.Section>
         <S.Section id="skills" bgColor={theme.colors.primary}>
           <Skills />
         </S.Section>
-        <S.Section id="projects" bgColor={theme.colors.background}>
+        <S.Section id="projects">
           <Projects />
         </S.Section>
         <S.Section id="contact" bgColor={theme.colors.secondary}>
