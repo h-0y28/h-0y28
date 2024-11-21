@@ -21,7 +21,7 @@ export const MainPage: React.FC = () => {
         <S.Section id="about" bgColor={theme.colors.background}>
           <About />
         </S.Section>
-        <S.Section id="skills" bgColor={theme.colors.accent}>
+        <S.Section id="skills" bgColor={theme.colors.primary}>
           <Skills />
         </S.Section>
         <S.Section id="projects" bgColor={theme.colors.background}>
