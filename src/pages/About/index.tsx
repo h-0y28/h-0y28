@@ -1,9 +1,10 @@
 import AboutCard from "../../components/AboutCard";
 import * as S from "./style";
+import * as T from "../style";
 
 export default function About() {
   return (
-    <S.Container>
+    <T.Container>
       <S.Title>About</S.Title>
       <S.CardContainer>
         <AboutCard title="생년월일" content="2008.08.02" />
@@ -30,6 +31,6 @@ export default function About() {
         /> */}
         <AboutCard title="이메일" content="fedevluna@gmail.com" />
       </S.CardContainer>
-    </S.Container>
+    </T.Container>
   );
 }
