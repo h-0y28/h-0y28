@@ -1,4 +1,4 @@
-const theme = {
+export const theme = {
   colors: {
     primary: "#F28482", // 메인 색상 - 핑크
     secondary: "#0A090C", // 보조 색상 - 검정
