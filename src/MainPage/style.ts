@@ -9,6 +9,5 @@ export const Section = styled.section<{ bgColor?: string; bgImg?: string }>`
   background-size: cover;
   background-position: center;
   display: flex;
-  align-items: center;
   justify-content: center;
 `;
