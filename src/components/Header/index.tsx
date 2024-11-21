@@ -18,9 +18,6 @@ const Header: React.FC = () => {
         <S.NavButton onClick={() => handleScroll("projects")}>
           Projects
         </S.NavButton>
-        <S.NavButton onClick={() => handleScroll("contact")}>
-          Contact
-        </S.NavButton>
       </S.Nav>
     </S.HeaderContainer>
   );
