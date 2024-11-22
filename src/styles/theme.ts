@@ -5,7 +5,7 @@ export const theme = {
     background: "#F7EDE2", // 배경 색상
     black: "#17171B",
     white: "#ffffff",
-    highlight: "#F6AE2D", // 포인트 색상 - 노랑
+    highlight: "#FF8C00 ", // 포인트 색상 - 주황
     // accent: "#FFC300", // 강조 색상 - 노랑
   },
   fonts: {
