@@ -1,6 +1,6 @@
 import ProjectCard from "./../../components/ProjectCard/index";
 import * as S from "./style";
-import * as T from "../style";
+// import * as T from "../style";
 
 export default function Projects() {
   const projects = [
@@ -25,17 +25,24 @@ export default function Projects() {
   ];
 
   return (
-    <T.Container>
-      <S.Title>Projects</S.Title>
-      {projects.map((project, index) => (
-        <ProjectCard
-          key={index}
-          skills={project.skills}
-          title={project.title}
-          content={project.content}
-          href={project.href}
-        />
-      ))}
-    </T.Container>
+    <S.Container>
+      <S.TitleContainer>
+        <S.Title>
+          Projects
+          <S.AddTitle>Projects</S.AddTitle>
+        </S.Title>
+      </S.TitleContainer>
+      <S.CardContainer>
+        {projects.map((project, index) => (
+          <ProjectCard
+            key={index}
+            skills={project.skills}
+            title={project.title}
+            content={project.content}
+            href={project.href}
+          />
+        ))}
+      </S.CardContainer>
+    </S.Container>
   );
 }
