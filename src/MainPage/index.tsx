@@ -20,10 +20,10 @@ export const MainPage: React.FC = () => {
         <S.Section id="about">
           <About />
         </S.Section>
-        <S.Section id="skills" bgColor={theme.colors.gray}>
+        <S.Section id="skills" bgColor={theme.colors.primary}>
           <Skills />
         </S.Section>
-        <S.Section id="projects" bgColor={theme.colors.primary}>
+        <S.Section id="projects">
           <Projects />
         </S.Section>
       </main>
