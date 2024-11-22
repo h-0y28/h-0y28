@@ -1,6 +1,6 @@
 import ProjectCard from "./../../components/ProjectCard/index";
 import * as S from "./style";
-// import * as T from "../style";
+import * as T from "../style";
 
 export default function Projects() {
   const projects = [
@@ -25,7 +25,7 @@ export default function Projects() {
   ];
 
   return (
-    <S.Container>
+    <T.Container>
       <S.TitleContainer>
         <S.Title>
           Projects
@@ -43,6 +43,6 @@ export default function Projects() {
           />
         ))}
       </S.CardContainer>
-    </S.Container>
+    </T.Container>
   );
 }

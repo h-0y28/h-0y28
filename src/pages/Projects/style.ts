@@ -1,11 +1,6 @@
 import styled from "styled-components";
 import { theme } from "./../../styles/theme";
 
-export const Container = styled.div`
-  margin-right: 10%;
-  margin-left: 10%;
-`;
-
 export const TitleContainer = styled.div`
   position: relative;
   text-align: center;
