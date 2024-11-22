@@ -2,12 +2,12 @@ import React from "react";
 import Header from "../components/Header";
 import Home from "../pages/Home";
 import About from "../pages/About";
-import Skills from "../pages/Projects";
-import Projects from "../pages/Skills";
 import theme from "../styles/theme";
 import homeImg from "../assets/homeImg.jpg";
 
 import * as S from "./style";
+import Skills from "../pages/Skills";
+import Projects from "../pages/Projects";
 
 export const MainPage: React.FC = () => {
   return (
@@ -20,10 +20,10 @@ export const MainPage: React.FC = () => {
         <S.Section id="about">
           <About />
         </S.Section>
-        <S.Section id="skills" bgColor={theme.colors.primary}>
+        <S.Section id="skills" bgColor={theme.colors.gray}>
           <Skills />
         </S.Section>
-        <S.Section id="projects">
+        <S.Section id="projects" bgColor={theme.colors.primary}>
           <Projects />
         </S.Section>
       </main>
