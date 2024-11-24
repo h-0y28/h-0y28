@@ -5,21 +5,25 @@ interface CardProps {
   title: string;
   content: string;
   href?: string;
+  imageSrc: string;
 }
 
-const AboutCard: React.FC<CardProps> = ({ title, content, href }) => {
+const AboutCard: React.FC<CardProps> = ({ title, content, href, imageSrc }) => {
   return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      style={{ textDecoration: "none" }}
-    >
-      <S.CardContainer>
-        <S.CardTitle>{title}</S.CardTitle>
-        <S.CardContent>{content}</S.CardContent>
-      </S.CardContainer>
-    </a>
+    <S.Container>
+      <S.Image src={imageSrc} alt="Picture" />
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ textDecoration: "none" }}
+      >
+        <S.CardContainer>
+          <S.CardTitle>{title}</S.CardTitle>
+          <S.CardContent>{content}</S.CardContent>
+        </S.CardContainer>
+      </a>
+    </S.Container>
   );
 };
 
