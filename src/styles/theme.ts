@@ -7,6 +7,7 @@ export const theme = {
     black: "#17171B",
     gray: "#B0B0B0",
     white: "#ffffff",
+    silver: "#C0C0C0",
     // accent: "#FFC300", // 강조 색상 - 노랑
   },
   fonts: {
