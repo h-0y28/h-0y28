@@ -5,6 +5,7 @@ import GithubIcon from "../../assets/githubColor.png";
 import WebsiteIcon from "../../assets/websiteColor.png";
 
 interface CardProps {
+  position: "left" | "right";
   skills: string[];
   title: string;
   content: string;
@@ -15,6 +16,7 @@ interface CardProps {
 }
 
 const ProjectCard: React.FC<CardProps> = ({
+  position,
   skills,
   title,
   content,
@@ -23,19 +25,16 @@ const ProjectCard: React.FC<CardProps> = ({
   githubHref,
   websiteHref,
 }) => {
-  // console.log("GithubIcon:", GithubIcon);
-  // console.log("WebsiteIcon:", WebsiteIcon);
-
   return (
     <S.CardContainer
       as="a"
       href={href}
       target="_blank"
       rel="noopener noreferrer"
+      data-position={position}
     >
       <S.Header>
         <S.Term>{term}</S.Term>
-        {/* 깃 + 웹 링크 */}
         <S.IntroduceContainer>
           {githubHref && (
             <a href={githubHref} target="_blank" rel="noopener noreferrer">
