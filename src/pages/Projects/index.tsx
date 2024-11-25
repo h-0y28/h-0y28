@@ -41,10 +41,12 @@ export default function Projects() {
           <S.AddTitle>Projects</S.AddTitle>
         </S.Title>
       </S.TitleContainer>
+
       <S.CardContainer>
         {projects.map((project, index) => (
           <ProjectCard
             key={index}
+            position={index % 2 === 0 ? "left" : "right"}
             skills={project.skills}
             title={project.title}
             content={project.content}
