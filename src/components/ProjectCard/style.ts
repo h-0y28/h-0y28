@@ -1,19 +1,21 @@
 import styled from "styled-components";
 import theme from "../../styles/theme";
 
-export const CardContainer = styled.div`
+export const CardContainer = styled.a<{ "data-position"?: string }>`
   border: 1px solid ${theme.colors.highlight};
   border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 80%;
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+  width: 60%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   background-color: ${theme.colors.background};
+  align-self: ${({ "data-position": position }) =>
+    position === "left" ? "flex-start" : "flex-end"};
 
   &:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 `;
 
@@ -22,27 +24,30 @@ export const Header = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
+  transform: translateY(-65%);
 `;
 
 export const Term = styled.div`
-  font-size: 0.9rem;
-  color: ${theme.colors.black};
+  font-size: 2rem;
   font-weight: bold;
+  color: ${theme.colors.highlight};
+  text-decoration: none;
 `;
 
 export const IntroduceContainer = styled.div`
   display: flex;
+  align-items: center;
   gap: 8px;
 `;
 
 export const GithubImg = styled.img`
-  width: 1.7rem;
-  height: 1.7rem;
+  width: 5.2rem;
+  height: 5.2rem;
 `;
 
 export const WebsiteImg = styled.img`
-  width: 2rem;
-  height: 2rem;
+  width: 6rem;
+  height: 6rem;
 `;
 
 export const ContentContainer = styled.div`
