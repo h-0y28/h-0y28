@@ -15,8 +15,6 @@ export const Title = styled.div`
   transform: translate(-50%, -50%);
   color: ${theme.colors.background};
   z-index: 1;
-  /* -webkit-text-stroke: 1px ${theme.colors.secondary}; */
-  color: ${theme.colors.secondary};
 `;
 
 export const AddTitle = styled.div`
@@ -25,15 +23,14 @@ export const AddTitle = styled.div`
   left: 50%;
   transform: translate(-55%, -55%);
   color: transparent;
-  /* -webkit-text-stroke: 0%.5 ${theme.colors.black}; */
   color: ${theme.colors.highlight};
   z-index: 2;
 `;
 
 export const CardContainer = styled.div`
-  top: 0;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 4rem;
   padding-top: 5rem;
-  justify-content: space-around;
+  position: relative;
 `;
