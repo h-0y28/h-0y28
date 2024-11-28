@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { theme } from "./../../styles/theme";
 
 export const Title = styled.div`
-  color: ${theme.colors.primary};
-  -webkit-text-stroke: 0.1px ${theme.colors.background};
+  color: ${theme.colors.background};
+  -webkit-text-stroke: 0.1px ${theme.colors.primary};
   text-align: center;
   font-size: 6rem;
   padding-top: 5.5rem;
