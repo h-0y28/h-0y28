@@ -7,7 +7,7 @@ interface CardProps {
 const SkillCard: React.FC<CardProps> = ({ skills }) => {
   return (
     <>
-      <div>{skills}</div> {/* skills 값 출력 */}
+      <div>{skills}</div>
       <p>skill card</p>
     </>
   );
