@@ -4,9 +4,10 @@ interface SectionProps {
   bgImg?: string;
   bgBorder?: string;
 }
+
 export const Section = styled.section<SectionProps>`
   position: relative;
-
+  padding: 4rem 2rem;
   ${({ bgImg }) =>
     bgImg &&
     `
@@ -14,21 +15,15 @@ export const Section = styled.section<SectionProps>`
       background-size: cover;
       background-position: center;
     `}
-
   ${({ bgBorder }) =>
     bgBorder &&
     `
       border-top: 2px solid ${bgBorder};
       border-bottom: 2px solid ${bgBorder};
-      width: 50%;
-      display: flex;
-      justify-content: center;
       margin: 0 auto;
       margin-bottom: 10rem;
-      ;
-    `} 
+    `}
 
-  /* 홈 섹션에만 배경 불투명도 적용 */
   &:nth-of-type(1) {
     &:before {
       content: "";
@@ -37,8 +32,8 @@ export const Section = styled.section<SectionProps>`
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 0; /* 다른 콘텐츠보다 뒤에 표시 */
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+      z-index: 0;
     }
     * {
       position: relative;
