@@ -27,11 +27,15 @@ export const Header = styled.div`
   transform: translateY(-65%);
 `;
 
-export const Term = styled.div`
+export const Title = styled.div`
   font-size: 2rem;
   font-weight: bold;
   color: ${theme.colors.highlight};
-  text-decoration: none;
+  transform: translateY(-10%);
+  background-color: ${theme.colors.background};
+  padding: 10px;
+  border: 1px solid ${theme.colors.highlight};
+  border-radius: 14px;
 `;
 
 export const IntroduceContainer = styled.div`
@@ -41,13 +45,13 @@ export const IntroduceContainer = styled.div`
 `;
 
 export const GithubImg = styled.img`
-  width: 5.2rem;
-  height: 5.2rem;
+  width: 4rem;
+  height: 4rem;
 `;
 
 export const WebsiteImg = styled.img`
-  width: 6rem;
-  height: 6rem;
+  width: 4.6rem;
+  height: 4.6rem;
 `;
 
 export const ContentContainer = styled.div`
@@ -72,7 +76,7 @@ export const Stack = styled.div`
   font-weight: bold;
 `;
 
-export const CardTitle = styled.h3`
+export const Term = styled.h3`
   font-size: 1.5rem;
   color: ${theme.colors.black};
   margin-bottom: 8px;

@@ -34,7 +34,7 @@ const ProjectCard: React.FC<CardProps> = ({
       data-position={position}
     >
       <S.Header>
-        <S.Term>{term}</S.Term>
+        <S.Title>{title}</S.Title>
         <S.IntroduceContainer>
           {githubHref && (
             <a href={githubHref} target="_blank" rel="noopener noreferrer">
@@ -50,7 +50,7 @@ const ProjectCard: React.FC<CardProps> = ({
       </S.Header>
 
       <S.ContentContainer>
-        <S.CardTitle>{title}</S.CardTitle>
+        <S.Term>{term}</S.Term>
         <S.StackContainer>
           {skills.map((skill, index) => (
             <S.Stack key={index}>{skill}</S.Stack>
