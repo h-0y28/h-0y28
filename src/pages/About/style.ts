@@ -13,7 +13,6 @@ export const CardContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-bottom: 10rem;
 `;
 
 export const Card = styled.div`
