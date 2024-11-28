@@ -2,12 +2,12 @@ import styled from "styled-components";
 import { theme } from "./../../styles/theme";
 
 export const Title = styled.div`
-  color: ${theme.colors.background};
+  color: ${theme.colors.primary};
+  -webkit-text-stroke: 0.1px ${theme.colors.background};
   text-align: center;
-  font-size: 7rem;
+  font-size: 6rem;
   padding-top: 5.5rem;
   font-weight: bold;
-  /* z-index: 1; */
 `;
 
 export const AddTitle = styled.div`
