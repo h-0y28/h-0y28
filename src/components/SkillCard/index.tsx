@@ -1,4 +1,5 @@
 import React from "react";
+import * as S from "./style";
 
 interface CardProps {
   skills: string;
@@ -6,10 +7,9 @@ interface CardProps {
 
 const SkillCard: React.FC<CardProps> = ({ skills }) => {
   return (
-    <>
-      <div>{skills}</div>
-      <p>skill card</p>
-    </>
+    <S.CardContainer>
+      <S.Name>{skills}</S.Name>
+    </S.CardContainer>
   );
 };
 
