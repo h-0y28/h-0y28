@@ -20,7 +20,7 @@ export const MainPage: React.FC = () => {
         <S.Section id="about">
           <About />
         </S.Section>
-        <S.Section id="skills" bgColor={theme.colors.primary}>
+        <S.Section id="skills" bgBorder={theme.colors.primary}>
           <Skills />
         </S.Section>
         <S.Section id="projects">

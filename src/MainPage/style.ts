@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 interface SectionProps {
   bgImg?: string;
-  bgColor?: string;
+  bgBorder?: string;
 }
 export const Section = styled.section<SectionProps>`
   position: relative;
@@ -15,11 +15,18 @@ export const Section = styled.section<SectionProps>`
       background-position: center;
     `}
 
-  ${({ bgColor }) =>
-    bgColor &&
+  ${({ bgBorder }) =>
+    bgBorder &&
     `
-      background-color: ${bgColor};
-    `}
+      border-top: 2px solid ${bgBorder};
+      border-bottom: 2px solid ${bgBorder};
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      margin-bottom: 10rem;
+      ;
+    `} 
 
   /* 홈 섹션에만 배경 불투명도 적용 */
   &:nth-of-type(1) {
