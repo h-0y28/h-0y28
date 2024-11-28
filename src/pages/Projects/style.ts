@@ -13,7 +13,7 @@ export const Title = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: ${theme.colors.background};
+  color: ${theme.colors.highlight};
   z-index: 1;
 `;
 
@@ -23,7 +23,7 @@ export const AddTitle = styled.div`
   left: 50%;
   transform: translate(-55%, -55%);
   color: transparent;
-  color: ${theme.colors.highlight};
+  color: ${theme.colors.secondary};
   z-index: 2;
 `;
 
@@ -31,6 +31,6 @@ export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  padding-top: 5rem;
+  padding-top: 7rem;
   position: relative;
 `;
