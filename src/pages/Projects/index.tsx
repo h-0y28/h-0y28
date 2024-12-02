@@ -7,7 +7,7 @@ export default function Projects() {
     {
       skills: ["React", "TypeScript", "Tailwind CSS"],
       title: "Project 1",
-      content: "This is the first project description.",
+      description: "This is the first project description.",
       href: "https://example1.com",
       term: "2024.03 ~ 2024.04",
       githubHref: "https://github.com/h-0y28",
@@ -16,7 +16,7 @@ export default function Projects() {
     {
       skills: ["Next.js", "Chakra UI", "GraphQL"],
       title: "Project 2",
-      content: "This is the second project description.",
+      description: "This is the second project description.",
       href: "https://example2.com",
       term: "2024.03 ~ 2024.04",
       githubHref: "https://github.com/h-0y28",
@@ -25,7 +25,7 @@ export default function Projects() {
     {
       skills: ["Vue", "Vuetify", "Firebase"],
       title: "Project 3",
-      content: "This is the third project description.",
+      description: "This is the third project description.",
       href: "https://example3.com",
       term: "2024.03 ~ 2024.04",
       githubHref: "https://github.com/h-0y28",
@@ -45,15 +45,9 @@ export default function Projects() {
       <S.CardContainer>
         {projects.map((project, index) => (
           <ProjectCard
-            key={index}
+            key={project.title}
+            {...project}
             position={index % 2 === 0 ? "left" : "right"}
-            skills={project.skills}
-            title={project.title}
-            content={project.content}
-            href={project.href}
-            term={project.term}
-            githubHref={project.githubHref}
-            websiteHref={project.websiteHref}
           />
         ))}
       </S.CardContainer>
