@@ -38,10 +38,11 @@ export const Title = styled.div`
   border-radius: 14px;
 `;
 
-export const IntroduceContainer = styled.div`
+export const InconContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;
+  transform: translateY(-15%);
 `;
 
 export const GithubImg = styled.img`

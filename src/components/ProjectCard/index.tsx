@@ -35,7 +35,7 @@ const ProjectCard: React.FC<CardProps> = ({
     >
       <S.Header>
         <S.Title>{title}</S.Title>
-        <S.IntroduceContainer>
+        <S.InconContainer>
           {githubHref && (
             <a href={githubHref} target="_blank" rel="noopener noreferrer">
               <S.GithubImg src={GithubIcon} alt="GitHub Icon" />
@@ -46,7 +46,7 @@ const ProjectCard: React.FC<CardProps> = ({
               <S.WebsiteImg src={WebsiteIcon} alt="Website Icon" />
             </a>
           )}
-        </S.IntroduceContainer>
+        </S.InconContainer>
       </S.Header>
 
       <S.ContentContainer>
