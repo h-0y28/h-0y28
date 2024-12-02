@@ -1,64 +1,70 @@
-import React from "react";
+import React, { useState } from "react";
 import * as S from "./style";
 
 import GithubIcon from "../../assets/githubColor.png";
 import WebsiteIcon from "../../assets/websiteColor.png";
 
-interface CardProps {
+interface ProjectCardProps {
   position: "left" | "right";
   skills: string[];
   title: string;
-  content: string;
+  description: string;
   href: string;
   term: string;
   githubHref?: string;
   websiteHref?: string;
 }
 
-const ProjectCard: React.FC<CardProps> = ({
-  position,
+const ProjectCard: React.FC<ProjectCardProps> = ({
   skills,
   title,
-  content,
+  description,
   href,
   term,
   githubHref,
   websiteHref,
 }) => {
-  return (
-    <S.CardContainer
-      as="a"
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      data-position={position}
-    >
-      <S.Header>
-        <S.Title>{title}</S.Title>
-        <S.InconContainer>
-          {githubHref && (
-            <a href={githubHref} target="_blank" rel="noopener noreferrer">
-              <S.GithubImg src={GithubIcon} alt="GitHub Icon" />
-            </a>
-          )}
-          {websiteHref && (
-            <a href={websiteHref} target="_blank" rel="noopener noreferrer">
-              <S.WebsiteImg src={WebsiteIcon} alt="Website Icon" />
-            </a>
-          )}
-        </S.InconContainer>
-      </S.Header>
+  const [isHovered, setIsHovered] = useState(false);
 
-      <S.ContentContainer>
-        <S.Term>{term}</S.Term>
-        <S.StackContainer>
-          {skills.map((skill, index) => (
-            <S.Stack key={index}>{skill}</S.Stack>
-          ))}
-        </S.StackContainer>
-        <S.CardContent>{content}</S.CardContent>
-      </S.ContentContainer>
-    </S.CardContainer>
+  return (
+    <S.CardWrapper
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <S.CardContainer href={href} target="_blank" rel="noopener noreferrer">
+        <S.Header>
+          <S.Title>{title}</S.Title>
+          <S.IconContainer>
+            {githubHref && (
+              <a href={githubHref} target="_blank" rel="noopener noreferrer">
+                <S.GithubImg src={GithubIcon} alt="GitHub Icon" />
+              </a>
+            )}
+            {websiteHref && (
+              <a href={websiteHref} target="_blank" rel="noopener noreferrer">
+                <S.WebsiteImg src={WebsiteIcon} alt="Website Icon" />
+              </a>
+            )}
+          </S.IconContainer>
+        </S.Header>
+
+        <S.ContentContainer>
+          <S.Term>{term}</S.Term>
+          <S.SkillContainer>
+            {skills.map((skill, index) => (
+              <S.Skill key={index}>{skill}</S.Skill>
+            ))}
+          </S.SkillContainer>
+        </S.ContentContainer>
+      </S.CardContainer>
+
+      {isHovered && (
+        <S.Description>
+          <S.DescriptionTitle>Project Description</S.DescriptionTitle>
+          <S.DescriptionContent>{description}</S.DescriptionContent>
+        </S.Description>
+      )}
+    </S.CardWrapper>
   );
 };
 
