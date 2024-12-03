@@ -1,70 +1,64 @@
-import React, { useState } from "react";
+import React from "react";
 import * as S from "./style";
 
 import GithubIcon from "../../assets/githubColor.png";
 import WebsiteIcon from "../../assets/websiteColor.png";
 
-interface ProjectCardProps {
+interface CardProps {
   position: "left" | "right";
   skills: string[];
   title: string;
-  description: string;
+  content: string;
   href: string;
   term: string;
   githubHref?: string;
   websiteHref?: string;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({
+const ProjectCard: React.FC<CardProps> = ({
+  position,
   skills,
   title,
-  description,
+  content,
   href,
   term,
   githubHref,
   websiteHref,
 }) => {
-  const [isHovered, setIsHovered] = useState(false);
-
   return (
-    <S.CardWrapper
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+    <S.CardContainer
+      as="a"
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      data-position={position}
     >
-      <S.CardContainer href={href} target="_blank" rel="noopener noreferrer">
-        <S.Header>
-          <S.Title>{title}</S.Title>
-          <S.IconContainer>
-            {githubHref && (
-              <a href={githubHref} target="_blank" rel="noopener noreferrer">
-                <S.GithubImg src={GithubIcon} alt="GitHub Icon" />
-              </a>
-            )}
-            {websiteHref && (
-              <a href={websiteHref} target="_blank" rel="noopener noreferrer">
-                <S.WebsiteImg src={WebsiteIcon} alt="Website Icon" />
-              </a>
-            )}
-          </S.IconContainer>
-        </S.Header>
+      <S.Header>
+        <S.Title>{title}</S.Title>
+        <S.InconContainer>
+          {githubHref && (
+            <a href={githubHref} target="_blank" rel="noopener noreferrer">
+              <S.GithubImg src={GithubIcon} alt="GitHub Icon" />
+            </a>
+          )}
+          {websiteHref && (
+            <a href={websiteHref} target="_blank" rel="noopener noreferrer">
+              <S.WebsiteImg src={WebsiteIcon} alt="Website Icon" />
+            </a>
+          )}
+        </S.InconContainer>
+      </S.Header>
 
-        <S.ContentContainer>
-          <S.Term>{term}</S.Term>
-          <S.SkillContainer>
-            {skills.map((skill, index) => (
-              <S.Skill key={index}>{skill}</S.Skill>
-            ))}
-          </S.SkillContainer>
-        </S.ContentContainer>
-      </S.CardContainer>
-
-      {isHovered && (
-        <S.Description>
-          <S.DescriptionTitle>Project Description</S.DescriptionTitle>
-          <S.DescriptionContent>{description}</S.DescriptionContent>
-        </S.Description>
-      )}
-    </S.CardWrapper>
+      <S.ContentContainer>
+        <S.Term>{term}</S.Term>
+        <S.StackContainer>
+          {skills.map((skill, index) => (
+            <S.Stack key={index}>{skill}</S.Stack>
+          ))}
+        </S.StackContainer>
+        <S.CardContent>{content}</S.CardContent>
+      </S.ContentContainer>
+    </S.CardContainer>
   );
 };
 

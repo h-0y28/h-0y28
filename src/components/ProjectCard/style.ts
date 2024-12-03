@@ -1,21 +1,17 @@
 import styled from "styled-components";
 import theme from "../../styles/theme";
 
-export const CardWrapper = styled.div`
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-  position: relative;
-`;
-
-export const CardContainer = styled.a`
+export const CardContainer = styled.a<{ "data-position"?: string }>`
   border: 1px solid ${theme.colors.highlight};
   border-radius: 12px;
   padding: 20px;
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
   width: 60%;
-  background-color: ${theme.colors.background};
-  text-decoration: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  background-color: ${theme.colors.background};
+  align-self: ${({ "data-position": position }) =>
+    position === "left" ? "flex-start" : "flex-end"};
 
   &:hover {
     transform: scale(1.03);
@@ -28,17 +24,25 @@ export const Header = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
+  transform: translateY(-65%);
 `;
 
-export const Title = styled.h2`
-  font-size: 1.8rem;
+export const Title = styled.div`
+  font-size: 2rem;
   font-weight: bold;
   color: ${theme.colors.highlight};
+  transform: translateY(-10%);
+  background-color: ${theme.colors.background};
+  padding: 10px;
+  border: 1px solid ${theme.colors.highlight};
+  border-radius: 14px;
 `;
 
-export const IconContainer = styled.div`
+export const InconContainer = styled.div`
   display: flex;
+  align-items: center;
   gap: 8px;
+  transform: translateY(-15%);
 `;
 
 export const GithubImg = styled.img`
@@ -57,43 +61,31 @@ export const ContentContainer = styled.div`
   gap: 10px;
 `;
 
-export const Term = styled.h3`
-  font-size: 1.2rem;
-  color: ${theme.colors.black};
-`;
-
-export const SkillContainer = styled.div`
+export const StackContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
+  margin-bottom: 8px;
 `;
 
-export const Skill = styled.span`
+export const Stack = styled.div`
   padding: 4px 8px;
   background-color: ${theme.colors.highlight};
   color: ${theme.colors.background};
   border-radius: 4px;
   font-size: 0.8rem;
-`;
-
-export const Description = styled.div`
-  flex: 1;
-  background-color: ${theme.colors.backgroundLight};
-  border: 1px solid ${theme.colors.highlight};
-  border-radius: 12px;
-  padding: 20px;
-  transition: opacity 0.3s ease-in-out;
-`;
-
-export const DescriptionTitle = styled.h3`
-  font-size: 1.5rem;
   font-weight: bold;
-  color: ${theme.colors.highlight};
-  margin-bottom: 10px;
 `;
 
-export const DescriptionContent = styled.p`
-  font-size: 1rem;
+export const Term = styled.h3`
+  font-size: 1.5rem;
   color: ${theme.colors.black};
+  margin-bottom: 8px;
+  font-weight: bold;
+`;
+
+export const CardContent = styled.p`
+  font-size: 1rem;
+  color: #666;
   line-height: 1.5;
 `;
