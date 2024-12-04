@@ -25,10 +25,15 @@ const ProjectCard: React.FC<CardProps> = ({
   githubHref,
   websiteHref,
 }) => {
-  const renderLink = (iconSrc: string, altText: string, url?: string) =>
+  const renderLink = (
+    iconSrc: string,
+    altText: string,
+    url?: string,
+    isGitHub?: boolean
+  ) =>
     url && (
       <a href={url} target="_blank" rel="noopener noreferrer">
-        <S.IconImg src={iconSrc} alt={altText} />
+        <S.IconImg src={iconSrc} alt={altText} isGitHub={isGitHub} />
       </a>
     );
 
@@ -42,8 +47,8 @@ const ProjectCard: React.FC<CardProps> = ({
       <S.Header>
         <S.Title>{title}</S.Title>
         <S.IconContainer>
-          {renderLink(GithubIcon, "GitHub Icon", githubHref)}
-          {renderLink(WebsiteIcon, "Website Icon", websiteHref)}
+          {renderLink(GithubIcon, "GitHub Icon", githubHref, true)}
+          {renderLink(WebsiteIcon, "Website Icon", websiteHref, false)}
         </S.IconContainer>
       </S.Header>
 

@@ -45,9 +45,9 @@ export const IconContainer = styled.div`
   transform: translateY(-15%);
 `;
 
-export const IconImg = styled.img`
-  width: 4rem;
-  height: 4rem;
+export const IconImg = styled.img<{ isGitHub?: boolean }>`
+  width: ${({ isGitHub }) => (isGitHub ? "4rem" : "4.5rem")};
+  height: ${({ isGitHub }) => (isGitHub ? "4rem" : "4.5rem")};
 `;
 
 export const ContentContainer = styled.div`
