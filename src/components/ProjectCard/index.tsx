@@ -25,9 +25,15 @@ const ProjectCard: React.FC<CardProps> = ({
   githubHref,
   websiteHref,
 }) => {
+  const renderLink = (iconSrc: string, altText: string, url?: string) =>
+    url && (
+      <a href={url} target="_blank" rel="noopener noreferrer">
+        <S.IconImg src={iconSrc} alt={altText} />
+      </a>
+    );
+
   return (
     <S.CardContainer
-      as="a"
       href={href}
       target="_blank"
       rel="noopener noreferrer"
@@ -35,25 +41,17 @@ const ProjectCard: React.FC<CardProps> = ({
     >
       <S.Header>
         <S.Title>{title}</S.Title>
-        <S.InconContainer>
-          {githubHref && (
-            <a href={githubHref} target="_blank" rel="noopener noreferrer">
-              <S.GithubImg src={GithubIcon} alt="GitHub Icon" />
-            </a>
-          )}
-          {websiteHref && (
-            <a href={websiteHref} target="_blank" rel="noopener noreferrer">
-              <S.WebsiteImg src={WebsiteIcon} alt="Website Icon" />
-            </a>
-          )}
-        </S.InconContainer>
+        <S.IconContainer>
+          {renderLink(GithubIcon, "GitHub Icon", githubHref)}
+          {renderLink(WebsiteIcon, "Website Icon", websiteHref)}
+        </S.IconContainer>
       </S.Header>
 
       <S.ContentContainer>
         <S.Term>{term}</S.Term>
         <S.StackContainer>
-          {skills.map((skill, index) => (
-            <S.Stack key={index}>{skill}</S.Stack>
+          {skills.map((skill) => (
+            <S.Stack key={skill}>{skill}</S.Stack>
           ))}
         </S.StackContainer>
         <S.CardContent>{content}</S.CardContent>

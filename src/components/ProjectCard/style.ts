@@ -5,7 +5,6 @@ export const CardContainer = styled.a<{ "data-position"?: string }>`
   border: 1px solid ${theme.colors.highlight};
   border-radius: 12px;
   padding: 20px;
-  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
   width: 60%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
@@ -27,7 +26,7 @@ export const Header = styled.div`
   transform: translateY(-65%);
 `;
 
-export const Title = styled.div`
+export const Title = styled.h2`
   font-size: 2rem;
   font-weight: bold;
   color: ${theme.colors.highlight};
@@ -36,23 +35,19 @@ export const Title = styled.div`
   padding: 10px;
   border: 1px solid ${theme.colors.highlight};
   border-radius: 14px;
+  background-color: ${theme.colors.background};
 `;
 
-export const InconContainer = styled.div`
+export const IconContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;
   transform: translateY(-15%);
 `;
 
-export const GithubImg = styled.img`
+export const IconImg = styled.img`
   width: 4rem;
   height: 4rem;
-`;
-
-export const WebsiteImg = styled.img`
-  width: 4.6rem;
-  height: 4.6rem;
 `;
 
 export const ContentContainer = styled.div`
@@ -65,10 +60,9 @@ export const StackContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
-  margin-bottom: 8px;
 `;
 
-export const Stack = styled.div`
+export const Stack = styled.span`
   padding: 4px 8px;
   background-color: ${theme.colors.highlight};
   color: ${theme.colors.background};
