@@ -8,7 +8,7 @@ interface CardProps {
   position: "left" | "right";
   skills: string[];
   title: string;
-  content: string;
+  description: string;
   href: string;
   term: string;
   githubHref?: string;
@@ -19,7 +19,7 @@ const ProjectCard: React.FC<CardProps> = ({
   position,
   skills,
   title,
-  content,
+  description,
   href,
   term,
   githubHref,
@@ -59,7 +59,7 @@ const ProjectCard: React.FC<CardProps> = ({
             <S.Stack key={skill}>{skill}</S.Stack>
           ))}
         </S.StackContainer>
-        <S.CardContent>{content}</S.CardContent>
+        <S.CardContent>{description}</S.CardContent>
       </S.ContentContainer>
     </S.CardContainer>
   );
