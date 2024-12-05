@@ -18,10 +18,10 @@ const AboutCard: React.FC<CardProps> = ({ title, content, href, imageSrc }) => {
         rel="noopener noreferrer"
         style={{ textDecoration: "none" }}
       >
-        <S.CardContainer>
+        <S.ContentContainer>
           <S.CardTitle>{title}</S.CardTitle>
           <S.CardContent>{content}</S.CardContent>
-        </S.CardContainer>
+        </S.ContentContainer>
       </a>
     </S.Container>
   );
