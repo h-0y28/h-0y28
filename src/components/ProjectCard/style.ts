@@ -82,12 +82,11 @@ export const CardContent = styled.p`
   font-size: 1rem;
   color: #666;
   line-height: 1.5;
-  background-color: black;
-  transform: translateY(100px);
+  background-color: ${theme.colors.background};
+  transition: 0.5s;
   width: 100%;
   height: 100px;
-
   &:hover {
-    transform: translateX(100px);
+    background-color: black;
   }
 `;
