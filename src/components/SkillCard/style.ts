@@ -3,25 +3,55 @@ import theme from "../../styles/theme";
 
 export const CardContainer = styled.div`
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
-  width: 300px;
-  height: 150px;
-  padding: 1rem;
-  background-color: ${theme.colors.backgroundLight};
-  border: 1px solid ${theme.colors.highlight};
-  border-radius: 16px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+
+  border-left: 3px solid ${theme.colors.background};
   transition: transform 0.3s, box-shadow 0.3s;
 
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border-left: 3px solid ${theme.colors.highlight};
+    transition: 0.5s;
   }
 `;
 
-export const Name = styled.div`
+export const Category = styled.h3`
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 700;
   color: ${theme.colors.primary};
+  margin-bottom: 1rem;
+`;
+
+export const SkillList = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 0;
+`;
+
+export const SkillItem = styled.li`
+  font-size: 1rem;
+  color: ${theme.colors.black};
+  margin-bottom: 0.5rem;
+`;
+
+export const SubCategory = styled.div`
+  margin-bottom: 1rem;
+`;
+
+export const SubCategoryTitle = styled.h4`
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: ${theme.colors.secondary};
+  margin-bottom: 0.5rem;
+`;
+
+export const SubCategoryList = styled.ul`
+  list-style: disc;
+  margin-left: 1rem;
 `;
