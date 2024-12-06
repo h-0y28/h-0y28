@@ -3,8 +3,9 @@ import theme from "../../styles/theme";
 
 export const CardContainer = styled.div`
   display: flex;
+  flex-direction: column;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 2rem;
   justify-content: center;
   padding: 5rem 2rem;
 `;
