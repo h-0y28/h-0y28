@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import theme from "../../styles/theme";
 
 export const HeaderContainer = styled.header`
   position: fixed;
@@ -20,12 +21,13 @@ export const NavButton = styled.button`
   padding: 0.5rem 1rem;
   background: none;
   border: none;
-  color: #333;
-  font-size: 1rem;
+  color: ${theme.colors.black};
+  font-size: 1.5rem;
+  font-weight: bold;
   cursor: pointer;
   transition: color 0.2s;
 
   &:hover {
-    color: #007bff;
+    color: ${theme.colors.secondary};
   }
 `;
