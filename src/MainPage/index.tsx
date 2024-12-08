@@ -20,9 +20,11 @@ export const MainPage: React.FC = () => {
         <S.Section id="about">
           <About />
         </S.Section>
-        <S.Section id="skills" bgBorder={theme.colors.primary}>
-          <Skills />
-        </S.Section>
+        <S.ColorPage>
+          <S.Section id="skills" bgBorder={theme.colors.primary}>
+            <Skills />
+          </S.Section>
+        </S.ColorPage>
         <S.Section id="projects">
           <Projects />
         </S.Section>
