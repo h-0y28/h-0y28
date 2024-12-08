@@ -11,11 +11,10 @@ export const CardContainer = styled.div`
 `;
 
 export const Title = styled.div`
-  color: ${theme.colors.secondary};
-  /* text-shadow: 2px 2px 5px ${theme.colors.highlight}; */
+  color: ${theme.colors.background};
+  /* -webkit-text-stroke: 0.5px ${theme.colors.gray}; */
   text-align: center;
   font-size: 6rem;
   padding-top: 5rem;
   font-weight: bold;
-  /* margin-bottom: 2rem; */
 `;
