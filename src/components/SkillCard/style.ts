@@ -12,11 +12,11 @@ export const CardContainer = styled.div`
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 
-  border-left: 3px solid ${theme.colors.background};
+  border-left: 3px solid ${theme.colors.dun};
   transition: transform 0.3s, box-shadow 0.3s;
 
   &:hover {
-    border-left: 3px solid ${theme.colors.highlight};
+    border-left: 3px solid ${theme.colors.background};
     transition: 0.5s;
   }
 `;
@@ -24,7 +24,7 @@ export const CardContainer = styled.div`
 export const Category = styled.h3`
   font-size: 1.5rem;
   font-weight: 700;
-  color: ${theme.colors.primary};
+  color: ${theme.colors.white};
   margin-bottom: 1rem;
 `;
 
@@ -47,7 +47,7 @@ export const SubCategory = styled.div`
 export const SubCategoryTitle = styled.h4`
   font-size: 1.25rem;
   font-weight: 600;
-  color: ${theme.colors.secondary};
+  color: ${theme.colors.background};
   margin-bottom: 0.5rem;
 `;
 
