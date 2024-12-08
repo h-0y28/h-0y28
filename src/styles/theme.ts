@@ -8,6 +8,7 @@ export const theme = {
     gray: "#B0B0B0",
     white: "#ffffff",
     silver: "#C0C0C0",
+    dun: "#D9C5B2",
   },
   fonts: {
     heading: "Arial, sans-serif",
